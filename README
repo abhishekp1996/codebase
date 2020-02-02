@@ -1,0 +1,5 @@
+DEMO CODEBASE APPLICATION
+
+1. npm install
+2. View postman collection: https://documenter.getpostman.com/view/2285220/SWTD9chy?version=latest
+3. Visit localhost:8001/events.html and call the http://localhost:8001/api/users/:userId/register/:eventId with filled in params and see the live users registering in for the events.
