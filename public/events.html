@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Details</title>
+</head>
+
+<body>
+
+    <h1>Gaming Event Board</h1>
+    <p>All the details are shown in realtime</p>
+    <hr>
+    <div id="timeline">
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        var timeline = document.getElementById('timeline');
+        socket.on('register', function (data) {
+            timeline.innerHTML += `<p><b>${data.userName}</b> registered for event <b>${data.eventName}</b></p>`
+        });
+    </script>
+</body>
+
+</html>
